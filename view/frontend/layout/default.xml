@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Nakor\TestTask\Block\Account\Link\Hobby" name="hobby-link" after="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Hobby</argument>
+                    <argument name="sortOrder" xsi:type="number">20</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="header">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Nakor_TestTask::html/header.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

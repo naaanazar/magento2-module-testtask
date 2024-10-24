@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+use Nakor\TestTask\Block\Account\Hobby\Edit;
+/** @var Edit $block */
+?>
+
+<form class="form"
+action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+method="post" id="form-hobby"
+enctype="multipart/form-data">
+    <fieldset class="fieldset hobby">
+        <legend class="legend"><span><?= $block->escapeHtml(__('Hobby information')) ?></span></legend><br>
+        <div class="field">
+            <label class="label" for="hobby">
+                <span><?= $block->escapeHtml(__('Hobby')) ?></span>
+            </label>
+            <div class="control">
+                <select name="hobby" id="hobby">
+                    <?php foreach ($block->getHobbyOptions() as $option): ?>
+                        <option
+                            value="<?= $option->getValue() ?>"
+                            <?= $option->getValue() == $block->getCustomerHobbyValue() ? 'selected' : '' ?>
+                        >
+                            <?= $option->getLabel() ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>">
+                <span><?= $block->escapeHtml(__('Save')) ?></span>
+            </button>
+        </div>
+    </div>
+    <input type="hidden" name="form_key" value="<?= $block->getFormKey() ?>" />
+</form>

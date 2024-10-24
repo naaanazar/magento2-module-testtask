@@ -1,0 +1,11 @@
+type Customer {
+    hobby: String @resolver(class: "Nakor\\TestTask\\Model\\Resolver\\Hobby")
+}
+
+input HobbyInput {
+    hobby: String
+}
+
+extend type Mutation {
+    updateHobby(input: HobbyInput): Customer @resolver(class: "Nakor\\TestTask\\Model\\Resolver\\UpdateHobby")
+}
