@@ -1,11 +1,12 @@
 <div align="center">
   <img src="https://img.shields.io/badge/magento-2.X-brightgreen.svg?logo=magento&longCache=true" alt="Supported Magento Versions" />
 </div>
-# Magento2 module TestTask
 
-## GraphQL query examples
+## Magento2 module TestTask
 
-### Get Attribute Hobby options
+### GraphQL query examples
+
+#### Get Attribute Hobby options
 ```
 {
   customAttributeMetadata(
@@ -26,7 +27,7 @@
 }
 ```
 
-### Update Hobby attribute
+#### Update Hobby attribute
 ```
 
 mutation {
@@ -36,7 +37,7 @@ mutation {
 }
 ```
 
-### Get Attribute Hobby text value
+#### Get Attribute Hobby text value
 ```
 {
   customer {
