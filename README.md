@@ -6,7 +6,7 @@
 
 ### GraphQL query examples
 
-#### Get Attribute Hobby options
+#### Get attribute hobby options
 ```
 {
   customAttributeMetadata(
@@ -27,7 +27,7 @@
 }
 ```
 
-#### Update Hobby attribute
+#### Update hobby attribute
 ```
 
 mutation {
@@ -37,7 +37,7 @@ mutation {
 }
 ```
 
-#### Get Attribute Hobby text value
+#### Get attribute hobby text value
 ```
 {
   customer {
