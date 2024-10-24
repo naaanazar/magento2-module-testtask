@@ -27,7 +27,7 @@
 ```
 
 mutation {
-  updateHobby(input: { hobby: "[optionId]" }) {
+  updateHobby(input: { hobby: "optionId" }) {
     hobby
   }
 }
